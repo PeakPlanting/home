@@ -357,7 +357,16 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 	<script>includeHTML();</script> 
 
 	<script>
-		alert('It was clicked');
+		var el = window.getElementById('Anchor')
+		
+		el.innerHTML = "reAD more"
+		
+		function myFunction(obj) {
+			obj.preventDefault();
+			alert('It was clicked');
+		}
+
+		el.addEventListener('click', myFunction);
 	</script>
 
 </div>
