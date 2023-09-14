@@ -86,11 +86,15 @@
         </a>
 
         <script>
+            var el = document.getElementById('Anchor')
+
+            el.innerHTML = "reAD more"
+            
             function myFunction(obj) {
                 obj.preventDefault();
                 alert('It was clicked');
             }
-            var el = document.getElementById('Anchor')
+
             el.addEventListener('click', myFunction);
         </script>
 
