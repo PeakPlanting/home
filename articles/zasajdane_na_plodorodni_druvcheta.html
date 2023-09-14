@@ -86,10 +86,12 @@
         </a>
 
         <script>
-            function myFunction() {
+            function myFunction(obj) {
+                obj.preventDefault();
                 alert('It was clicked');
             }
-            document.getElementById('Anchor').addEventListener('click', myFunction, false);
+            var el = document.getElementById('Anchor')
+            el.addEventListener('click', myFunction);
         </script>
 
     </div>
