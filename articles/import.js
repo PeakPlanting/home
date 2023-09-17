@@ -7,21 +7,19 @@ function includeHTML() {
   par_div.innerHTML = importText("\articles\zasajdane_na_plodorodni_druvcheta.html")
 }
 
-function importText(textFile) {
-  "use strict";
-  var rawFile = new XMLHttpRequest();
-  var allText = "";
-  rawFile.open("Get", textFile, false);
-  rawFile.onreadystatechange = function()
-  {
-      if(rawFile.readyState === 4)
-      {
-          if(rawFile.status === 200 || rawFile.status == 0)
-          {
-              allText = rawFile.responseText;
-          }
+function importText(file) {
+  var returnText, file, xhttp;
+  if (file) {
+    xhttp = new XMLHttpRequest();
+    xhttp.open("GET", file, true);
+    xhttp.send();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4) {
+        if (this.status == 200) {returnText = this.responseText;}
+        if (this.status == 404) {returnText = "Page not found.";}
       }
-  }
-  rawFile.send(null);
-  return allText;
+      return returnText;
+    }
+  } 
+  return "Page not found"    
 }
