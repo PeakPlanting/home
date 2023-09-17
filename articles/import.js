@@ -49,11 +49,9 @@ async function loadPage() {
     // The HTML is now included.
 
     // Add event listener after the HTML is included.
-    document.addEventListener("DOMContentLoaded", () => {
       console.log('loaded 2')
       const button = document.getElementById("showMore");
       console.log(button);
-    });
   } catch (error) {
     console.error(error);
   }
