@@ -45,10 +45,12 @@ function includeHTML(elId, file) {
 async function loadPage() {
   try {
     await includeHTML("article-posts", "articles/zasajdane_na_plodorodni_druvcheta.html");
+    console.log('loaded')
     // The HTML is now included.
 
     // Add event listener after the HTML is included.
     document.addEventListener("DOMContentLoaded", () => {
+      console.log('loaded 2')
       const button = document.getElementById("showMore");
       console.log(button);
     });
