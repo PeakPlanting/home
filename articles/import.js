@@ -37,17 +37,7 @@ function includeHTML(elId, file) {
   }
 }
 
-
-
-function showMore(){
-  const el2 = document.querySelector('#showMore')
-  console.log(el2)
-}
-            // el.innerHTML = "reAD more"
-            
-            // function myFunction(obj) {
-            //     obj.preventDefault();
-            //     alert('It was clicked');
-            // }
-
-            // el.addEventListener('click', myFunction);
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("showMore")
+  console.log(button)
+})
