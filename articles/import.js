@@ -11,6 +11,7 @@ function includeHTML(elId, file) {
         includeHTML();
       }
     }
+    console.log("hello")
     xhttp.open("GET", file, true);
     xhttp.send();
     return;
