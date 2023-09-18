@@ -32,9 +32,8 @@ async function loadPage() {
     const button = document.getElementById('article-posts')
     button.addEventListener("click", (el) => {
       el = el.target;
-      
-      while (el.id != "showMore" && el.id != "showLess"){el = el.parentElement}
-      console.log(el);
+     while (el.id != "showMore" && el.id != "showLess"){el = el.parentElement}
+
       el.parentElement.style.display = "none";
       if (el.id == "showMore"){
         let oth = el.parentElement.parentElement.querySelector('#showLess');
