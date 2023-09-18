@@ -31,11 +31,12 @@ async function loadPage() {
 
     const button = document.getElementById('showMore')
     button.addEventListener("click", () => {
-      alert('working')
       button.parentElement.style.display = "none";
-      par = button.parentElement
-      oth = par.parentElement.getElementById('showLess');
+      let par = button.parentElement;
+      let par2 = par.parentElement;
+      let oth = par2.getElementById('showLess');
       oth.parentElement.style.display = "block";
+      alert('work')
     })
   } catch (error) {
     console.error(error);
