@@ -29,11 +29,17 @@ async function loadPage() {
     await includeHTML("article-posts", "articles/zasajdane_na_plodorodni_druvcheta.html");
    
 
-    const button = document.getElementById('showMore')
-    button.addEventListener("click", () => {
-      button.parentElement.style.display = "none";
-      let oth = button.parentElement.parentElement.querySelector('#showLess');
-      oth.parentElement.style.display = "block";
+    const button = document.getElementById('article-posts')
+    button.addEventListener("click", (el) => {
+      el = el.target;
+      el.parentElement.style.display = "none";
+      if (el.id == "showMore"){
+        let oth = el.parentElement.parentElement.querySelector('#showLess');
+        oth.parentElement.style.display = "block";
+      }else if (el.id == "showLess"){
+        let oth = el.parentElement.parentElement.querySelector('#showMore');
+        oth.parentElement.style.display = "block";
+      }
     })
   } catch (error) {
     console.error(error);
