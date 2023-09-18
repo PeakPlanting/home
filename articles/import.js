@@ -33,7 +33,7 @@ async function loadPage() {
     button.addEventListener("click", (el) => {
       el = el.target;
       
-      while (el.id == "showMore" || el.id == "showLess"){el = el.parentElement}
+      while (el.id != "showMore" && el.id != "showLess"){el = el.parentElement}
       console.log(el);
       el.parentElement.style.display = "none";
       if (el.id == "showMore"){
