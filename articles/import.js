@@ -33,7 +33,8 @@ async function loadPage() {
     button.addEventListener("click", () => {
       alert('working')
       button.parentElement.style.display = "none";
-      oth = button.parentElement.parentElement.getElementById('showLess');
+      par = button.parentElement
+      oth = par.parentElement.getElementById('showLess');
       oth.parentElement.style.display = "block";
     })
   } catch (error) {
