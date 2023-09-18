@@ -34,7 +34,7 @@ async function loadPage() {
       button.parentElement.style.display = "none";
       let par = button.parentElement;
       let par2 = par.parentElement;
-      let oth = par2.getElementById('showLess');
+      let oth = par2.querySelector('#showLess');
       oth.parentElement.style.display = "block";
       alert('work')
     })
