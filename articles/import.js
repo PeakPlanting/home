@@ -35,6 +35,7 @@ async function loadPage() {
      while (el.id != "showMore" && el.id != "showLess"){el = el.parentElement}
 
       el.parentElement.style.display = "none";
+      el.parentElement.id = "";
       if (el.id == "showMore"){
         let oth = el.parentElement.parentElement.querySelector('#showLess');
         oth.parentElement.style.display = "block";
