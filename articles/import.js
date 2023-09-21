@@ -42,6 +42,7 @@ async function loadPage() {
       }else if (el.id == "showLess"){
         let oth = el.parentElement.parentElement.querySelector('#showMore');
         oth.parentElement.style.display = "block";
+        oth.parentElement.id = "zasajdane-na-plodoodni-druvcheta";
       }
     })
   } catch (error) {
