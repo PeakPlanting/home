@@ -38,6 +38,7 @@ async function loadPage() {
       if (el.id == "showMore"){
         let oth = el.parentElement.parentElement.querySelector('#showLess');
         oth.parentElement.style.display = "block";
+        oth.parentElement.id = "zasajdane-na-plodoodni-druvcheta";
       }else if (el.id == "showLess"){
         let oth = el.parentElement.parentElement.querySelector('#showMore');
         oth.parentElement.style.display = "block";
